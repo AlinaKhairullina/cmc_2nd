@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 int lens(FILE * f)
 {
     char c;
@@ -12,6 +13,7 @@ int lens(FILE * f)
     }
     return n;
 }
+
 void more (char fl, int  num, int linenum, FILE * f ) // more([-s][-num][+linenum] filename)
 {
     int n = lens(f), len = 0;
