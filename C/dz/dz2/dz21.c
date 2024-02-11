@@ -1,6 +1,10 @@
 #include <stdio.h>
+
 typedef unsigned char utype;
 typedef char stype;
+
+/*Функция меняет порядок бит в числе на противоположный.*/
+
 stype rev_bit(stype value)
 {
     stype new = 0;
@@ -9,6 +13,7 @@ stype rev_bit(stype value)
     value = new;
     return value;
 }
+
 int main()
 {
     stype n, n1;

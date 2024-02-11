@@ -1,5 +1,9 @@
 #include <stdio.h>
+
 typedef unsigned int uint;
+
+/*Если в x старший байт не равен его младшему байту, поменять эти байты местами, иначе обнулить остальные (все, кроме старшего и младшего) байты в x.*/
+
 uint change(uint x)
 {
     uint  c = 0x00ffff00; //маска
@@ -9,6 +13,7 @@ uint change(uint x)
         x = (x & (~c));
     return x;
 }
+
 int main()
 {
     uint n, res;
