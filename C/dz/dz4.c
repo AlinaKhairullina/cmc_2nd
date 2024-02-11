@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+/*Написать функцию реверсирования однонаправленного списка*/
+
 struct list{
     int key;
     struct list * next;
 };
+
 struct list* reverse(struct list* l)
 {
     struct list* tmp = NULL, * prev = NULL;
@@ -17,6 +21,7 @@ struct list* reverse(struct list* l)
     l = prev;
     return l;
 }
+
 struct list* create(void)
 {
     int x; 
@@ -27,12 +32,14 @@ struct list* create(void)
     l->next = create();
     return l;
 }
+
 void print_list(struct list * l)
 {
     if (!l) return;
     printf("%d ", l->key);
     print_list(l->next);
 }
+
 void del_list(struct list ** l)
 {
     if (!(*l)) return;
@@ -40,6 +47,7 @@ void del_list(struct list ** l)
     free(*l);
     (*l) = NULL;
 }
+
 int main()
 {
     printf("Введите список чисел: ");
