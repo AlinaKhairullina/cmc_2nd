@@ -2,10 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 #define N 4
+
+/*Работа с двунаправенным списком*/
+
 struct list{
     char *str;
     struct list * next, *pred;
 };
+
 struct list* create_list(int n) //создание двунаправленного списка
 {
     char s[255];
@@ -35,12 +39,14 @@ struct list* create_list(int n) //создание двунаправленно�
     }
     return L;
 }
+
 void print_list(struct list ** L)// 3 вывод списка на экран
 {
     if (!(*L)) return;
     printf("%s ", (*L)->str);
     print_list(&(*L)->next);
 }
+
 void del_list(struct list **L)//удаление списка
 {
     if (!(*L)) return;
@@ -49,7 +55,8 @@ void del_list(struct list **L)//удаление списка
     free((*L));
     (*L) = NULL;
 }
-void del_n_elem(struct list** L) // 4
+
+void del_n_elem(struct list** L) // удаление элемента списка по заданному номеру
 {
     int n, i;
     struct list * L1 = *L;
@@ -82,7 +89,8 @@ void del_n_elem(struct list** L) // 4
     free(p->str);
     free(p);
 }
-void add_n_elem(struct list ** L) // 5
+
+void add_n_elem(struct list ** L) // вставка элемента с заданным номером
 {
     int n, i;
     struct list * L1 = (*L);
@@ -108,6 +116,7 @@ void add_n_elem(struct list ** L) // 5
     if (L1 -> next) L1->next->pred = p;
     L1->next = p;
 }
+
 int main()
 {
     int n;
