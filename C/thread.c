@@ -13,7 +13,6 @@ pthread_exit(NULL);
 int main(){
 pthread_t th_id, id;
 void *pret;
-(pthread_create(&th_id, NULL, thr_fn, NULL));
 pthread_create(&id, NULL, thr_fn, NULL);
 printf("%d\n", pthread_equal(th_id, id));
 time_t tm_start = time(0);
