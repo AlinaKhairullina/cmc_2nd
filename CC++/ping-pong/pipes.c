@@ -1,3 +1,4 @@
+/* Реализовать игру пинг-понг между N процессами, синхронизировать с помощью каналов */
 #include <stdio.h>
 #include <sys/types.h>
 #include <stdlib.h>
