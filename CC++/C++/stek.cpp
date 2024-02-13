@@ -42,14 +42,15 @@ class B2{
             max = d;
         };
 
-        // ~B2(){
+        ~B2(){
 
-        //     delete [] elems;
-        //     dlina = 0; 
-        //     max = 0;
-        // };
+            delete [] elems;
+            dlina = 0; 
+            max = 0;
+        };
         void PR();
 };
+
 void B1 :: PR(){
     cout << "Стек : ";
     for (int i = dlina - 1; i >= 0; i--)
@@ -60,6 +61,7 @@ void B1 :: PR(){
     cout << "\n";
 
 };
+
 void B2 :: PR(){
     cout << "Очередь : ";
     for (int i = 0; i < dlina; i++)
@@ -69,6 +71,7 @@ void B2 :: PR(){
     }
     cout << "\n";
 };
+
 void F(B1 & b, int a){
     if (b.dlina < b.max){
         b.elems[b.dlina] = a;
@@ -135,5 +138,4 @@ int main(){
     obj1.PR();//печатаем очередь
     cout << n << "," << k << endl; 
     return 0;
-
 }
