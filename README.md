@@ -1,4 +1,4 @@
-# Studying at the Faculty of Computational Mathematics and Cybernetics (CMC)
+# Studying at the Faculty of Computational Mathematics and Cybernetics (CMC).
 
 **In the repository you can see my various files in some programming languages that were written in seminars at the university, some homework, and also files that were written for fun.**
 ---
